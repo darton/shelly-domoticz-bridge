@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart Gunicorn App
+Requires=shellyapp.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart shellyapp.service
+
+[Install]
+WantedBy=multi-user.target
