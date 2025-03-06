@@ -1,0 +1,14 @@
+[Unit]
+Description=Shelly to Domoticz bridge
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/home/pi/app/shelly/
+ExecStart=/usr/local/bin/gunicorn --workers 2 --bind 0.0.0.0:5000 app:app
+Environment=PYTHONUNBUFFERED=1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
