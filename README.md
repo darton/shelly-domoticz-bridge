@@ -1,2 +1,1 @@
-# shelly-domoticz-bridge
-Middleware system for integrating Shelly devices with Domoticz.
+Middleware system for integrating Shelly devices with Domoticz. Utilizes Flask and Gunicorn to act as an intermediary, providing access to Domoticz's API and enabling control of virtual switches. Facilitates authorization management and direct communication with Shelly devices via their API.
