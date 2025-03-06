@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitoring changes in the app.py file.
+
+[Path]
+PathModified=/home/pi/app/shelly/app.py
+Unit=shellyapp-restart.service
+
+[Install]
+WantedBy=multi-user.target
